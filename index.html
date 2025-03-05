@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asia Capitals Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Menu -->
+    <header class="header">
+      <h1>Asia Capitals Quiz</h1>
+      <div class="controls">
+        <button class="btn" onclick="game.start()">▶️ Start</button>
+        <button class="btn" onclick="game.toggleMode()">🌙</button>
+        <button class="btn" onclick="game.stop()">⏹️</button>
+      </div>
+    </header>
+
+    <!-- Game UI -->
+    <div class="question"></div>
+    <div class="choices"></div>
+    <div class="feedback"></div>
+    <div class="score-panel">Score: 0</div>
+  </div>
+
+  <!-- Winning Animation -->
+  <div class="winning-animation hidden">
+    <h1>You Win!</h1>
+    <p>Congratulations! You reached 1000 points.</p>
+    <button class="btn" onclick="game.start()">Play Again</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="correct" src="assets/correct.mp3"></audio>
+  <audio id="wrong" src="assets/wrong.mp3"></audio>
+  <audio id="bg-music" src="assets/background.mp3" loop></audio>
+  <audio id="win-sound" src="assets/win.mp3"></audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
